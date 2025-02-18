@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine's Day Vinesh</title>
+    <title>Love Page</title>
     <style>
         body {
-            background-color: #ff99cc;
-            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff66b2, #ff3385); /* Background color set to pink */
+            font-family: 'Arial', sans-serif;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
         }
-        .container {
-            width: 80%;
-            margin: 40px auto;
+
+        h1 {
+            font-size: 4em;
+            font-weight: bold;
             text-align: center;
+            z-index: 10;
+            animation: pulse 2s infinite;
         }
-        .heart {
-            font-size: 100px;
-            color: #ff69b4;
-            animation: beat 1s infinite;
-        }
-        @keyframes beat {
+
+        @keyframes pulse {
             0% {
                 transform: scale(1);
             }
@@ -30,19 +38,85 @@
                 transform: scale(1);
             }
         }
-        .message {
-            font-size: 24px;
-            color: #333;
-            margin-top: 20px;
+
+        .heart {
+            position: absolute;
+            font-size: 3em; /* Increased heart size */
+            animation: float 4s ease-in-out infinite; /* Faster float animation */
+            color: rgba(255, 0, 0, 0.8); /* Red color hearts */
         }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+            25% {
+                transform: translateY(-200px) rotate(45deg); /* Increased float distance */
+            }
+            50% {
+                transform: translateY(0) rotate(90deg);
+            }
+            75% {
+                transform: translateY(-200px) rotate(135deg);
+            }
+            100% {
+                transform: translateY(0) rotate(180deg);
+            }
+        }
+
+        /* Floating Hearts at random positions */
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-duration: 6s;
+        }
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-duration: 5s;
+        }
+        .heart:nth-child(3) {
+            left: 50%;
+            animation-duration: 7s;
+        }
+        .heart:nth-child(4) {
+            left: 70%;
+            animation-duration: 8s;
+        }
+        .heart:nth-child(5) {
+            left: 90%;
+            animation-duration: 6s;
+        }
+
+        /* Adjusting the image size */
+        img {
+            width: 400px; /* Set image width to medium size */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: rounded corners */
+            margin-top: 20px; /* Add some space above the image */
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <span class="heart">&hearts;</span>
-        <h1>Happy Valentine's Day Vinesh!</h1>
-        <p class="message">Wishing you a day filled with love, laughter, and happiness.</p>
-    </div>
+    <h1>I love you so much Nisha</h1>
+    <p>
+        Nisha, my beautiful wife, you are the light in my life. <br> 
+        Your love has been a constant source of strength and inspiration. <br>
+        The way you care for me, the way you always know how to make me smile, is a gift I cherish every single day. <br>
+        You make my world brighter just by being you. <br>
+        Ranjeet, you are a true blessing in my life. <br>
+        Your unwavering support, your kindness, and your incredible heart mean more to me than words can say. <br>
+        Together, we make the perfect team, and I am so thankful for every moment we share.
+    </p>
+
+    <!-- Image -->
+    <img src="ranjeet.img.jpg" alt="Love You Nisha">
+
+    <!-- Floating Hearts -->
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+
 </body>
 </html>
-
